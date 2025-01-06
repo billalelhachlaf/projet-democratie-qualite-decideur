@@ -185,9 +185,6 @@ fun App() {
 }
 
 
-fun Float.reduireNb(): String {
-    return String.format("%.10f", this).trimEnd('0').trimEnd('.')
-}
 
 fun main() = application {
     Window(title = "Votely - Décideurs",

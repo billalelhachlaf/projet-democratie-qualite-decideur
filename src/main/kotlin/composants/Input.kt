@@ -20,7 +20,7 @@ import androidx.compose.ui.unit.sp
 import androidx.compose.ui.zIndex
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.launch
-import reduireNb
+
 
 
 fun SnackbarHostState.showSnackbar(message: String, scope: CoroutineScope) {
@@ -37,7 +37,7 @@ fun SnackbarHostState.showSnackbar(message: String, scope: CoroutineScope) {
 @Preview
 fun Input(titre:String, valeurDefaut:Float, onClick: (Float) -> Number){
     val scope = rememberCoroutineScope()
-    val textState = remember { mutableStateOf(valeurDefaut.reduireNb()) }
+    val textState = remember { mutableStateOf(valeurDefaut.toString()) }
     val snackbarHostState = remember { SnackbarHostState() }
     Column(
         verticalArrangement = Arrangement.spacedBy(10.dp),
