@@ -6,6 +6,6 @@ public interface ApiURL {
      http://localhost:80 ou https://projets.iut-orsay.fr/saes3-izaidi*/
 
 
-    public static String URL = "http://localhost:80";
+    public static String URL = "https://projets.iut-orsay.fr/saes3-izaidi";
 
 }

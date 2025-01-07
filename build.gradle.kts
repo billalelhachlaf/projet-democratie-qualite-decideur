@@ -32,26 +32,11 @@ compose.desktop {
         mainClass = "MainKt"
 
         nativeDistributions {
-            targetFormats(TargetFormat.Dmg)
+            //targetFormats(TargetFormat.Dmg)
+            //targetFormats(TargetFormat.Exe)
+            //targetFormats(TargetFormat.Deb)
             packageName = "projet-democratie-qualite-decideur"
             packageVersion = "1.0.0"
         }
     }
-}
-
-
-tasks.register<Jar>("fatJar") {
-    group = "build"
-    duplicatesStrategy = DuplicatesStrategy.EXCLUDE
-    manifest {
-        attributes["Main-Class"] = "MainKt" // Replace with your main class name
-    }
-    from(sourceSets.main.get().output)
-    dependsOn(configurations.runtimeClasspath)
-    from({
-        configurations.runtimeClasspath.get().map { if (it.isDirectory) it else zipTree(it) }
-    })
-    archiveBaseName.set("${project.name}-all")
-    archiveVersion.set("")
-    destinationDirectory.set(file("${buildDir}/libs"))
 }

@@ -33,7 +33,7 @@ fun App() {
 
     //modifiez l'idGroupe pour afficher un autre groupe ici
 
-    val idGroupe = 3
+    val idGroupe = 1
 
     val jsonResponse = Groupe.getGroupeFromApi(idGroupe);
 
