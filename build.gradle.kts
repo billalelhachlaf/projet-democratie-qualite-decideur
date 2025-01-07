@@ -35,6 +35,7 @@ compose.desktop {
             //targetFormats(TargetFormat.Dmg)
             //targetFormats(TargetFormat.Exe)
             //targetFormats(TargetFormat.Deb)
+            //targetFormats(TargetFormat.AppImage)
             packageName = "projet-democratie-qualite-decideur"
             packageVersion = "1.0.0"
         }
